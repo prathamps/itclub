@@ -1,0 +1,29 @@
+<%- include('../structure/header') -%>
+        <link rel="stylesheet" href="/static/snake.css" />
+    </head>
+<body onload="startGame()">
+
+    <div class="game-container">
+            <canvas width="100%" height="100%" id="gamearea"></canvas>
+    </div>
+    <div class="game-over-container" id="gameOver">
+        <div class="game-over-card">
+            <div class="game-over-text">Game Over</div>
+            <div class="game-over-score" id="game-over-score">0</div>
+            <button class="leaderboard-btn">Leaderboards</button>
+        </div>
+    </div>
+    <div class="game-details" id="gameDetails">
+        <div class="game-details-container">
+            <div class="snakegameimage"></div>
+            <div class="scoredetails">
+                <div class="score">SCORE</div>
+                <div class="score-number" id="scoreNumber">0</div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="/static/snake.js"></script>
+<%- include('../structure/footer') -%>
+
