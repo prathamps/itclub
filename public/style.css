@@ -1,0 +1,127 @@
+html,
+body {
+	margin: 0px;
+	height: 100%;
+	font-family: "Roboto", sans-serif;
+	overflow: hidden;
+	background-color: #2d2c2c;
+}
+
+.heading-container {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -70%);
+}
+
+.text-heading {
+	height: 20rem;
+	width: 40rem;
+	transition: all 250ms ease-in-out;
+}
+
+.lap-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+}
+
+.laptop-graphic {
+	position: relative;
+	z-index: 100;
+	height: 20rem;
+	width: 25rem;
+	transition: all 250ms ease-in-out;
+}
+
+.lap-shadow-container {
+	position: absolute;
+	bottom: -50%;
+	left: -50%;
+	transform: translate(-50%, 30%);
+}
+
+.lap-shadow {
+	height: 41rem;
+	width: 75rem;
+	transition: all 250ms ease-in-out;
+}
+
+.button-container {
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+}
+
+.power-button {
+	position: absolute;
+	z-index: 50;
+	bottom: 25px;
+	right: 25px;
+	transition: all 250ms ease-in-out;
+}
+
+.power-button:hover,
+.power-button:focus .power-up {
+	fill: aquamarine;
+	transition: all 250ms ease-in-out;
+}
+
+/* Mobile Screens */
+@media only screen and (max-width: 600px) {
+	.text-heading {
+		height: 10rem;
+		width: 20rem;
+	}
+
+	.laptop-graphic {
+		height: 10rem;
+		width: 15rem;
+	}
+	.lap-shadow-container {
+		position: absolute;
+		bottom: -50%;
+		left: -50%;
+		transform: translate(-48%, 38%);
+	}
+	.lap-shadow {
+		height: 25rem;
+		width: 40rem;
+	}
+
+	.power-off-button {
+		width: 15rem;
+		height: 10rem;
+	}
+}
+
+/* Tablet screens */
+
+@media (min-width: 600px) and (max-width: 1200px) {
+	.text-heading {
+		height: 15rem;
+		width: 25rem;
+	}
+
+	.laptop-graphic {
+		height: 15rem;
+		width: 20rem;
+	}
+	.lap-shadow-container {
+		position: absolute;
+		bottom: -50%;
+		left: -50%;
+		transform: translate(-48%, 38%);
+	}
+	.lap-shadow {
+		height: 40rem;
+		width: 55rem;
+	}
+
+	.power-off-button {
+		width: 20rem;
+		height: 15rem;
+	}
+}
