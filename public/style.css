@@ -103,7 +103,7 @@ body {
 
 /* Tablet screens */
 
-@media (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 600px) and (max-width: 1400px) {
 	.text-heading {
 		height: 15rem;
 		width: 25rem;
