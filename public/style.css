@@ -65,10 +65,14 @@ body {
 
 .power-button:hover,
 .power-button:focus .power-up {
-	fill: aquamarine;
+	fill: rgb(9, 212, 145);
 	transition: all 250ms ease-in-out;
 }
 
+.power-button:hover,
+.power-button:focus {
+	transform: scale(1.05);
+}
 /* Mobile Screens */
 @media only screen and (max-width: 600px) {
 	.text-heading {
