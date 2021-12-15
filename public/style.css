@@ -9,9 +9,9 @@ body {
 
 .heading-container {
 	position: absolute;
-	top: 30%;
+	top: 25%;
 	left: 50%;
-	transform: translate(-50%, -70%);
+	transform: translate(-50%, -65%);
 }
 
 .text-heading {
@@ -53,6 +53,7 @@ body {
 	position: absolute;
 	bottom: 25px;
 	right: 25px;
+	transition: all 250ms ease-in-out;
 }
 
 .power-button {
@@ -127,5 +128,11 @@ body {
 	.power-off-button {
 		width: 20rem;
 		height: 15rem;
+	}
+
+	.power-button {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
 	}
 }

@@ -19,6 +19,10 @@ app.get("/tatakaesnake", (req, res) => {
 	res.render("./games/snakegame", { title: "TatakaeSnake" });
 });
 
+app.get("/worldofchoice", (req, res) => {
+	res.render("./menu/choicemenu", { title: "IChooseYou" });
+});
+
 app.listen(process.env.PORT || 3000, () => {
 	console.log(`New Connection formed on ${port}`);
 });
