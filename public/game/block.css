@@ -99,7 +99,7 @@ li {
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 	margin-left: 0rem;
-	height: 20rem;
+	height: fit-content;
 	border: #000013 0.15rem solid;
 	border-radius: 0.2rem;
 	cursor: move;
@@ -115,6 +115,8 @@ li {
 }
 
 .code-highlight {
+	height: fit-content;
+	width: fit-content;
 	margin-left: 5rem !important;
 }
 
