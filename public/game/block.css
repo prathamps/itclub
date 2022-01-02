@@ -56,7 +56,7 @@ h4 {
 	position: fixed;
 	left: 0;
 	height: inherit;
-	width: 25rem;
+	width: 15rem;
 	border-radius: 10px;
 }
 .to-do-column .column-header {
@@ -65,7 +65,7 @@ h4 {
 
 .doing-column {
 	height: max-content;
-	width: 50rem;
+	width: 30rem;
 }
 
 .doing-column .column-header {
