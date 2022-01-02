@@ -1,5 +1,6 @@
 <%- include('../structure/header') -%>
         <link rel="stylesheet" href="/static/game/block.css" />
+        <link rel="stylesheet" href="/static/prism/prism.css" />
         <link rel="stylesheet"
         href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
     </head>
@@ -13,13 +14,34 @@
                 </div>
                 <ul class="task-list" id="to-do">
                   <li class="task">
-                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacihead.png" alt="Avatar" width="100%">
+                    <pre class="code-highlight" ><code class="language-c ">
+for (i = 3; i &lt= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+}
+</code></pre>
                   </li>
                   <li class="task">
-                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacibody.png" alt="Avatar" width="100%"> 
+                    <pre class="code-highlight" ><code class="language-c ">
+for (i = 3; i &gt= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+}
+</code></pre>
                   </li>
                   <li class="task">
-                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacitail.png" alt="Avatar" width="100%">
+                    <pre class="code-highlight" ><code class="language-c ">
+for (i = 3; i &gt= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 - t2;
+}
+</code></pre>
                   </li>
                 </ul>
               </li>
@@ -30,17 +52,32 @@
                 </div>
                 <ul class="task-list" id="doing">
                   <li class="task question-code">
-                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacihead.png" alt="Avatar" width="100%">
+                    <pre class="code-highlight" ><code class="language-c ">
+#include &ltstdio.h&gt
+int main() {
+                            
+int i, n;
+                   
+int t1 = 0, t2 = 1;
+int nextTerm = t1 + t2;        
+
+printf("Enter the number of terms: ");
+scanf("%d", &n);                        
+printf("Fibonacci Series: %d, %d, ", t1, t2);                        
+                    </code></pre>                    
                   </li>
                   <li class="task question-code">
-                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacitail.png" alt="Avatar" width="100%">
+                    <pre class="code-highlight" ><code class="language-c ">
+    return 0;
+}                  
+                    </code></pre>                    
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
-         
-          <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>      
+        
+    <script type="text/javascript" src="/static/prism/prism.js"></script>      
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
     <script type="text/javascript" src="/static/game/block.js"></script>
 <%- include('../structure/footer') -%>

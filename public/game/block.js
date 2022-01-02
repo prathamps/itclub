@@ -1,5 +1,4 @@
 function init() {
-	hljs.highlightAll();
 	var drake = dragula(
 		[document.getElementById("to-do"), document.getElementById("doing")],
 		{
