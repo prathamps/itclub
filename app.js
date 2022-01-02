@@ -15,12 +15,19 @@ app.get("/", (req, res) => {
 	res.render("landing", { title: "Transponster" });
 });
 
+//Menu Page
+app.get("/worldofchoice", (req, res) => {
+	res.render("./menu/choicemenu", { title: "IChooseYou" });
+});
+
+//Snake Game
 app.get("/tatakaesnake", (req, res) => {
 	res.render("./games/snakegame", { title: "TatakaeSnake" });
 });
 
-app.get("/worldofchoice", (req, res) => {
-	res.render("./menu/choicemenu", { title: "IChooseYou" });
+//Snake Game
+app.get("/snapthatcode", (req, res) => {
+	res.render("./games/blocksnippets", { title: "SnapThatCode" });
 });
 
 app.listen(process.env.PORT || 3000, () => {

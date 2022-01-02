@@ -1,0 +1,47 @@
+<%- include('../structure/header') -%>
+        <link rel="stylesheet" href="/static/game/block.css" />
+        <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    </head>
+    <body onload="init()">
+        <div class="main-container">
+            <ul class="columns">
+          
+              <li class="column to-do-column">
+                <div class="column-header">
+                  <h4>Options</h4>
+                </div>
+                <ul class="task-list" id="to-do">
+                  <li class="task">
+                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacihead.png" alt="Avatar" width="100%">
+                  </li>
+                  <li class="task">
+                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacibody.png" alt="Avatar" width="100%"> 
+                  </li>
+                  <li class="task">
+                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacitail.png" alt="Avatar" width="100%">
+                  </li>
+                </ul>
+              </li>
+          
+              <li class="column doing-column">
+                <div class="column-header">
+                  <h4>Program to find the sum of two numbers</h4>
+                </div>
+                <ul class="task-list" id="doing">
+                  <li class="task question-code">
+                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacihead.png" alt="Avatar" width="100%">
+                  </li>
+                  <li class="task question-code">
+                    <img class="game_img" src="/static/assets/games/blockCode/fibonnacitail.png" alt="Avatar" width="100%">
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+         
+          <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>      
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
+    <script type="text/javascript" src="/static/game/block.js"></script>
+<%- include('../structure/footer') -%>
+    
