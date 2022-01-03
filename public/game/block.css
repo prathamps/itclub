@@ -121,7 +121,7 @@ li {
 	margin-left: 5rem !important;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 640px) {
 	.options-column {
 		position: absolute;
 		bottom: 0;
@@ -149,7 +149,7 @@ li {
 	}
 
 	.doing-column {
-		width: fit-content;
+		width: 22rem;
 		height: fit-content;
 	}
 	.code-highlight {
