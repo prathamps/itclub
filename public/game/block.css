@@ -52,27 +52,27 @@ h4 {
 	text-align: center;
 }
 
-.to-do-column {
+.options-column {
 	position: fixed;
 	left: 0;
 	height: inherit;
-	width: 15rem;
+	width: max-content;
 	border-radius: 10px;
 }
-.to-do-column .column-header {
+.options-column .column-header {
 	background: #ff872f;
 }
 
 .doing-column {
 	height: max-content;
-	width: 30rem;
+	width: max-content;
 }
 
 .doing-column .column-header {
 	background: #13a4d9;
 }
 
-.task-list {
+.option-list {
 	min-height: 3rem;
 }
 
@@ -100,6 +100,7 @@ li {
 	transition: all 0.3s;
 	margin-left: 0rem;
 	height: fit-content;
+
 	border: #000013 0.15rem solid;
 	border-radius: 0.2rem;
 	cursor: move;
@@ -110,7 +111,7 @@ li {
 .task p {
 	margin: auto;
 }
-.to-do-column .code-highlight {
+.options-column .code-highlight {
 	margin-left: 0rem !important;
 }
 
@@ -120,6 +121,45 @@ li {
 	margin-left: 5rem !important;
 }
 
+@media screen and (max-width: 960px) {
+	.options-column {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column-reverse;
+		z-index: 10;
+		opacity: 80%;
+		margin: auto;
+	}
+
+	.option-list {
+		display: flex;
+		flex-direction: row;
+		opacity: 80%;
+	}
+
+	.option-list:focus {
+		transform: scale(1.3);
+	}
+
+	.option-list .code-highlight {
+		font-size: 0.4rem !important;
+	}
+
+	.doing-column {
+		width: fit-content;
+		height: fit-content;
+	}
+	.code-highlight {
+		font-size: 0.8rem !important;
+		margin-left: 0px !important;
+	}
+
+	.task-list .question-code {
+		width: 22rem;
+	}
+}
 /* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
 
 .gu-mirror {
