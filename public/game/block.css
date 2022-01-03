@@ -137,6 +137,7 @@ li {
 		display: flex;
 		flex-direction: row;
 		opacity: 80%;
+		margin: auto;
 	}
 
 	.option-list:focus {
@@ -157,7 +158,7 @@ li {
 	}
 
 	.task-list .question-code {
-		width: 22rem;
+		width: inherit;
 	}
 }
 /* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
