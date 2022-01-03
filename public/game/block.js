@@ -1,6 +1,8 @@
 function init() {
-	var option = 0;
-	var drake = dragula(
+	let btn = document.querySelector(".submit-btn");
+	let option_head = document.querySelector(".option-header");
+	let option = 0;
+	let drake = dragula(
 		[document.getElementById("options"), document.getElementById("question")],
 		{
 			moves: function (el, source, handle, sibling) {
@@ -21,6 +23,8 @@ function init() {
 
 	drake.on("drop", (e1, target, source, sibling) => {
 		if (target.id == "question") {
+			console.log(btn);
+			option_head.innerHTML = "<button class=\"submit-btn\">Submit</button>";
 			if (e1.id === "optionOne") {
 				console.log("Yay... Correct answer");
 			}
