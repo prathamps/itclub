@@ -37,7 +37,7 @@ router.post("/register", (req, res) => {
 		passport.authenticate("local")(req, res, () => {
 			console.log(user);
 			req.flash("success", "Welcome " + user.username + ". Now go play!! :)");
-			res.redirect("/dashboard");
+			res.redirect(`/${user.username}/dashboard`);
 		});
 	});
 });
@@ -53,15 +53,24 @@ router.post(
 	"/login",
 	passport.authenticate("local", { failureRedirect: "/login" }),
 	(req, res) => {
-		res.redirect(`/${req.user.username}/dashboard`);
+		let statusChange = req.user;
+		statusChange.online = true;
+		User.findByIdAndUpdate(req.user.id, statusChange, (err, foundUser) => {
+			if (err) return res.redirect("/login");
+			res.redirect(`/${req.user.username}/dashboard`);
+		});
 	}
 );
 
 //LOGOUT Routes
 router.get("/logout", (req, res) => {
-	req.logout();
-	req.flash("success", "Logged you out!");
-	res.redirect("/worldofchoice");
+	let statusChange = req.user;
+	statusChange.online = false;
+	User.findByIdAndUpdate(req.user.id, statusChange, (err, foundUser) => {
+		req.logout();
+		req.flash("success", "Logged you out!");
+		res.redirect("/worldofchoice");
+	});
 });
 
 module.exports = router;

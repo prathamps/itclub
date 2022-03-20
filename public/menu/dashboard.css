@@ -1,0 +1,259 @@
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 60%;
+	left: 10rem;
+}
+
+.welcome-container {
+	display: flex;
+	justify-content: space-around;
+	background: #424152;
+	position: relative;
+	top: 8rem;
+	left: 10%;
+	width: 50%;
+	height: 60%;
+	border-radius: 47px;
+}
+
+.container-text {
+	margin-top: 2rem;
+	font-size: 3.5rem;
+}
+
+.profile-image {
+	margin-top: 2rem;
+}
+
+.events-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.events-container a {
+	text-decoration: none;
+}
+
+.itweek-container {
+	display: flex;
+	background: #e8c261;
+	position: relative;
+	top: 10rem;
+	left: 10rem;
+	width: 100%;
+	height: 60%;
+	border-radius: 47px;
+	color: #2d2c2c;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.itweek-container span {
+	position: relative;
+	top: 1rem;
+	left: 1rem;
+	padding-right: 13rem;
+}
+
+.event-counter {
+	display: block;
+	font-size: 1rem;
+}
+
+.event-button {
+	align-self: flex-end;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+.leaderboard-container {
+	background: #424152;
+	position: relative;
+	top: 10rem;
+	left: 15%;
+	width: 15%;
+	height: 60%;
+	border-radius: 47px;
+	display: grid;
+	place-items: center;
+}
+
+.leaderboard-container span {
+	color: #fff4f4;
+	font-size: 1.5rem;
+}
+
+.check-button {
+	color: #fff4f4;
+	text-decoration: none;
+	background-color: #2d2c2c;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+	font-size: 1.2rem;
+	padding: 1rem;
+}
+
+/* User Navbar */
+.user-nav-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	position: fixed;
+	top: 8rem;
+	right: 4rem;
+	background-color: #424152;
+	width: 30%;
+	height: 80%;
+	border-radius: 47px;
+}
+.level-text {
+	position: relative;
+	top: 1.5rem;
+	left: 1.5rem;
+	font-size: 2rem;
+}
+
+.level-container {
+	width: 80%;
+	height: 20%;
+	background-color: #2d2c2c;
+	border-radius: 47px;
+}
+
+.exp-bar-container {
+	position: relative;
+	top: 3rem;
+	left: 2rem;
+	background-color: #dfdfdf;
+	height: 10%;
+	width: 80%;
+	border-radius: 52px;
+}
+
+.group-container {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.groups-sub-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.group-icon {
+	background-color: #c4c4c4;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 25px;
+}
+
+.group-name {
+	margin-left: 1rem;
+}
+
+.recent-container {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.recent-sub-container {
+	margin: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.game-icon {
+	background-color: #c4c4c4;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 25px;
+}
+
+.game-name {
+	margin-left: 1rem;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 600px) {
+	.main-container {
+		height: 80%;
+	}
+	.container-text {
+		margin: auto 1rem;
+		font-size: 2rem;
+	}
+
+	.profile-image {
+		margin-top: 0;
+		transform: scale(0.7);
+	}
+	.welcome-container {
+		left: 5%;
+		width: 90%;
+		height: 30%;
+		border-radius: 25px;
+	}
+
+	.itweek-container {
+		left: 13%;
+		width: 80%;
+		height: 35%;
+	}
+
+	.itweek-container span {
+		position: relative;
+		top: 1rem;
+		left: 1rem;
+		padding-right: 0rem;
+	}
+
+	.leaderboard-container {
+		left: 3%;
+		width: 40%;
+		height: 35%;
+	}
+
+	.check-button {
+		font-size: 0.8rem;
+		padding: auto;
+	}
+
+	/* User Navbar */
+	.user-nav-container {
+		position: static;
+		margin: auto;
+		height: 60%;
+		width: 80%;
+		border-radius: 25px;
+	}
+
+	.level-text {
+		font-size: 1rem;
+	}
+
+	.level-container {
+		transform: scale(0.8);
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	.group-icon,
+	.game-icon {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 10px;
+	}
+}

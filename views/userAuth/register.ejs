@@ -1,6 +1,5 @@
 <%- include('../structure/header') -%>         
-    <link rel="stylesheet" href="/static/userAuth/login.css" />
-    <link rel="stylesheet" href="/static/userAuth/register.css" />
+    <link rel="stylesheet" href="/static/userAuth/userauth.css" />
 </head>
 <body>
     <% if(error && error.length > 0){ %>
@@ -12,7 +11,7 @@
     <div class="main-container">
         <h1>Register</h1>
         <form action="/register" method="POST">
-            <div class="form-container">
+            <div class="form-container register-form-container">
                 <div>
                     <input type="text" id="name" name="username" placeholder="Username" required>
                 </div>

@@ -87,7 +87,7 @@ app.get("/leaderboards", (req, res) => {
 	});
 });
 
-app.get("/worldofchoice", (req, res) => {
+app.get("/itweek/worldofchoice", (req, res) => {
 	res.render("menu/choicemenu.ejs", {
 		title: "IChooseYou",
 	});
@@ -103,6 +103,7 @@ app.get("/:id/dashboard", (req, res) => {
 			res.render("menu/dashboard.ejs", {
 				title: "Dashboard",
 				username: req.user.username,
+				status: req.user.online,
 			});
 		}
 	});

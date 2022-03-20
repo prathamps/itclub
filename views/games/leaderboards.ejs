@@ -13,7 +13,7 @@
 			var userArr=[];
             <% for(var i=0;i<users.length;i++){ %> 
 			var user = {name:"<%-users[i].username%>",
-						score:<%-users[i].score%>}
+						score:<%-users[i].online%>}
 				
 				userArr.push(user);
 			<%}%>  

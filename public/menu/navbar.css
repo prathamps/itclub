@@ -55,6 +55,7 @@ svg {
 /* Top Nav Bar */
 
 .top-nav-container {
+	z-index: 100;
 	display: flex;
 	flex-direction: row-reverse;
 	position: fixed;
@@ -121,6 +122,10 @@ svg {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
+	}
+
+	.nav-buttons {
+		transform: scale(0.8);
 	}
 	.power-button {
 		position: fixed;
