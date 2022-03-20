@@ -3,28 +3,30 @@ let game_area_outer_width = roundUp(window.outerWidth / 5);
 let game_area_outer_height = roundUp(window.outerWidth / 5);
 let game_area_height = roundUp(window.innerHeight);
 let grid_number = (game_area_width - game_area_outer_width) / 25;
-snake_horizontal = snake_vertical = 10;
-snake_horizontal_speed = snake_vertical_speed = 0;
-tile_count = grid_number;
-tile_count_horizontal =
+let snake_horizontal = (snake_vertical = 10);
+let snake_horizontal_speed = (snake_vertical_speed = 0);
+let tile_count = roundUp(grid_number);
+let tile_count_horizontal =
 	game_area_width > 600
 		? (game_area_width - game_area_outer_width) / 25
 		: game_area_width / 25;
-tile_count_vertical =
+let tile_count_vertical =
 	game_area_width > 600
 		? game_area_height / 25
 		: (game_area_height - game_area_outer_height) / 25;
-grid_size = 25;
-fruit_horizontal_distance = fruit_vertical_distance = 0;
-snake_trail = [];
-snake_length = 5;
+tile_count_horizontal = roundUp(tile_count_horizontal);
+tile_count_vertical = roundUp(tile_count_vertical);
+let grid_size = 25;
+let fruit_horizontal_distance = (fruit_vertical_distance = 0);
+let snake_trail = [];
+let snake_length = 5;
 
 function startGame() {
 	start();
 }
 
 function roundUp(n) {
-	return Math.floor((n + 5 / 2) / 5) * 5;
+	return Math.floor((n / 5) * 5);
 }
 
 function start() {
@@ -90,7 +92,7 @@ function updateGameArea() {
 	game_area_width = roundUp(window.innerWidth);
 	game_area_outer_width = roundUp(window.outerWidth / 5);
 	game_area_height = roundUp(window.innerHeight);
-	grid_number = (game_area_width - game_area_outer_width) / 25;
+	grid_number = roundUp((game_area_width - game_area_outer_width) / 25);
 	tile_count_horizontal =
 		game_area_width > 600
 			? (game_area_width - game_area_outer_width) / 25
@@ -99,6 +101,8 @@ function updateGameArea() {
 		game_area_width > 600
 			? game_area_height / 25
 			: (game_area_height - game_area_outer_height) / 25;
+	tile_count_horizontal = roundUp(tile_count_horizontal);
+	tile_count_vertical = roundUp(tile_count_vertical);
 	snake_horizontal = Math.floor(snake_horizontal);
 	snake_vertical = Math.floor(snake_vertical);
 	snake_horizontal += snake_horizontal_speed;
@@ -282,3 +286,7 @@ function handleTouchMove(evt) {
 	xDown = null;
 	yDown = null;
 }
+
+document.getElementById("leaderboardsBtn").onclick = () => {
+	location.href = "/leaderboards";
+};

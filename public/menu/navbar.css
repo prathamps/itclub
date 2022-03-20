@@ -1,0 +1,155 @@
+html,
+body {
+	margin: 0px;
+	height: 100%;
+	font-family: "Roboto", sans-serif;
+	background-color: #2d2c2c;
+	color: #fff;
+}
+
+.nav-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: fixed;
+	left: 0;
+	width: 7%;
+	height: 100%;
+	border-right: 1px #525151 solid;
+}
+
+.power-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem;
+}
+
+.nav-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem 1rem;
+	transition: 0.3ms;
+}
+
+.nav-items-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+svg {
+	transition: 250ms;
+}
+.inactive svg:hover {
+	transform: scale(120%);
+}
+
+.active {
+	width: fit-content;
+	padding: 1rem;
+	background: #916ec9;
+	border-radius: 10px;
+}
+
+/* Top Nav Bar */
+
+.top-nav-container {
+	display: flex;
+	flex-direction: row-reverse;
+	position: fixed;
+	top: 1rem;
+	right: 0;
+	width: 100%;
+	height: 7%;
+	border-right: 1px #525151 solid;
+}
+
+.geekcoins {
+	margin-left: 1rem;
+	font-size: 2rem;
+}
+
+.top-nav-buttons {
+	margin: 1rem 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.notification-button {
+	background-color: transparent;
+	transform: translateY(-15%);
+	border: none;
+	transition: 250ms;
+}
+
+.notification-button:hover {
+	transform: scale(110%);
+}
+
+.profile-button {
+	font-size: 2rem;
+	display: block;
+	height: 4rem;
+	width: 4rem;
+	border: 1px solid;
+	border-radius: 25px;
+	background-color: #916ec9;
+	color: #fff;
+	transition: 250ms;
+}
+
+.profile-button:hover {
+	transform: scale(110%);
+}
+/* Mobile Screens */
+@media only screen and (max-width: 600px) {
+	.nav-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 10%;
+		border-top: 1px #525151 solid;
+	}
+	.nav-items-container {
+		margin: 1rem auto 2rem auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	.power-button {
+		position: fixed;
+		top: 0.5rem;
+		left: 0;
+		margin: 1rem;
+		transform: scale(0.8);
+	}
+
+	.design-tweak {
+		position: absolute;
+		display: none;
+	}
+
+	/* top nav bar */
+	.top-nav-container {
+		right: -10%;
+		transform: scale(0.8);
+	}
+
+	.top-nav-buttons {
+		margin: 1rem 1rem;
+	}
+}
+
+/* Tablet screens */
+
+@media (min-width: 600px) and (max-width: 1400px) {
+	.active {
+		margin-left: 15%;
+	}
+}

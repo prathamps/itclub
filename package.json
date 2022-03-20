@@ -11,13 +11,22 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"body-parser": "^1.19.0",
+		"bcrypt": "^5.0.1",
+		"body-parser": "^1.19.1",
+		"connect-flash": "^0.1.1",
 		"dragula": "^3.7.3",
 		"ejs": "^3.1.6",
 		"express": "^4.17.1",
 		"express-favicon": "^2.0.1",
 		"express-session": "^1.17.2",
+		"method-override": "^3.0.0",
+		"middleware": "^1.0.0",
+		"mongoose": "^6.1.5",
 		"nodemon": "^2.0.15",
+		"passport": "^0.5.2",
+		"passport-local": "^1.0.0",
+		"passport-local-mongoose": "^6.1.0",
+		"require": "^0.4.4",
 		"serve-favicon": "^2.5.0",
 		"uuid": "^8.3.2"
 	}

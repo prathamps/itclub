@@ -1,0 +1,38 @@
+<%- include('../structure/header') %>
+<%- include('../structure/sidenav') %>
+
+    </body>
+</html>
+<!-- Leaderboard section -->
+<% users.forEach((user, index) => { %>
+<div id="playerName<%=index+1%>"></div>
+<div id="playerScore<%=index+1%>"></div>
+<%}) %>
+
+<!-- <script>
+			var userArr=[];
+            <% for(var i=0;i<users.length;i++){ %> 
+			var user = {name:"<%-users[i].username%>",
+						score:<%-users[i].score%>}
+				
+				userArr.push(user);
+			<%}%>  
+	 		var sortedUser = userArr.sort(function(a, b){
+  			  return b.score-a.score
+				})	
+            console.log(sortedUser)
+	function arrangeUser(){
+			for(var j=1;j<=sortedUser.length;j++){
+				 var x = document.getElementById("playerName"+j);
+				 var y = document.getElementById("playerScore"+j);
+					 var name = sortedUser[j-1].name;
+					 var score = sortedUser[j-1].score;
+                     console.log(name)
+					 x.innerText = name;
+					 y.innerText = score;
+				}
+			}
+	setTimeout(arrangeUser, 200);
+</script> -->
+
+<%- include('../structure/footer')-%>

@@ -8,21 +8,39 @@
             <ul class="navbar_menu">
                 <a href="/" id="navbar_logo"><i class="fas fa-power-off"></i></a>
                 <li class="navbar_item"><a href="/" class="navbar_links" id="home_page">Home</a></li>
-                <li class="navbar_item"><a href="#" class="navbar_links" id="home_page">Choices</a></li>
-                <li class="navbar_btn"><a href="#" class="button" id="home_page">Login</a></li>
-                <li class="navbar_btn"><a href="#" class="button" id="home_page">SignUp</a></li>
+                <li class="navbar_item"><a href="/worldofchoice" class="navbar_links" id="home_page">Choices</a></li>
+                <%if(!currentUser){%>
+                    <li class="navbar_btn"><a href="/login" class="button" id="home_page">Login</a></li>
+                    <li class="navbar_btn"><a href="/register" class="button" id="home_page">SignUp</a></li>
+                <%}else{%>
+                    <li class="navbar_btn"><a href="/logout" class="button" id="home_page">Logout</a></li>
+                <%}%> 
             </ul>
             <div class="navbar_toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            <%if(!currentUser){%>
             <ul class="navbar_menu">
-                <li class="navbar_btn_resp"><a href="#" class="button" id="home_page">Login</a></li>
-                <li class="navbar_btn_resp"><a href="#" class="button" id="home_page">SignUp</a></li>
+                <li class="navbar_btn_resp"><a href="/login" class="button" id="home_page">Login</a></li>
+                <li class="navbar_btn_resp"><a href="/register" class="button" id="home_page">SignUp</a></li>
             </ul>
+            <%}else{%>
+                <ul class="navbar_menu">
+                    <li class="navbar_btn_resp">Signed in as <%=currentUser.username%></li>
+                    <li class="navbar_btn_resp"><a href="/logout" class="button" id="home_page">Log Out</a></li>
+                </ul>
+            <%}%> 
         </div>
     </nav>
+    <div class="container my-4">
+		<% if(error && error.length > 0){ %>
+			<div class="alert alert-danger" role="alert"><%=error%></div>
+		<% } %>
+		<% if(success && success.length > 0){ %>
+			<div class="alert alert-success" role="alert"><%=success%></div>
+		<% } %>
     <!-- Game Choice -->
     <div class="content_container">
         <div class="choice_head_container">
@@ -30,7 +48,7 @@
         </div>
         <div class="games_container">
                 <div class="game_container">
-                    <a href="/tatakaesnake" class="game_button">
+                    <a href="/games/tatakaesnake" class="game_button">
                         <div class="game_card">  
                             <img class="game_img" src="/static/assets/games/snakegame.jpg" alt="Avatar" style="width:100%">
                             <div class="container">
@@ -41,7 +59,7 @@
                     </a>
                 </div>
                 <div class="game_container">
-                    <a href="/snapthatcode" class="game_button">
+                    <a href="/games/snapthatcode" class="game_button">
                         <div class="game_card">
                             <img class="game_img" src="/static/assets/games/dinosaur.jpg" alt="Avatar" style="width:100%">
                             <div class="container">
@@ -52,7 +70,7 @@
                     </a>
                 </div>
                 <div class="game_container">
-                    <a href="/tatakaesnake" class="game_button">
+                    <a href="/games/tatakaesnake" class="game_button">
                         <div class="game_card">
                             <img class="game_img" src="/static/assets/games/pictionary.jpg" alt="Avatar" style="width:100%">
                             <div class="container">
@@ -63,7 +81,7 @@
                     </a>
                 </div>
                 <div class="game_container">
-                    <a href="/tatakaesnake" class="game_button"></a>
+                    <a href="/games/tatakaesnake" class="game_button">
                         <div class="game_card">
                             <img class="game_img" src="/static/assets/games/quiz.jpg" alt="Avatar" style="width:100%">
                             <div class="container">

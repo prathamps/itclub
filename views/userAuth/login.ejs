@@ -1,0 +1,36 @@
+<%- include('../structure/header') -%>         
+    <link rel="stylesheet" href="/static/userAuth/login.css" />
+</head>
+<body>
+    <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger" role="alert"><%=error%></div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+        <div class="alert alert-success" role="alert"><%=success%></div>
+    <% } %>
+    <div class="main-container">
+        <h1>Login</h1>
+        <svg width="261" height="285" viewBox="0 0 261 285" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="130.5" cy="119.5" rx="130.5" ry="119.5" fill="#C4C4C4"/>
+            <path d="M222 191C222 166.07 212.36 142.16 195.2 124.532C178.041 106.904 154.767 97 130.5 97C106.233 97 82.9593 106.904 65.7997 124.532C48.6402 142.16 39 166.07 39 191L130.5 191H222Z" fill="#6590FF"/>
+            <ellipse cx="131" cy="71.5" rx="47" ry="47.5" fill="#525151"/>
+        </svg>
+        <form action="/login" method="POST">
+            <div class="form-container">
+                <div>
+                    <input type="username" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+            </div>
+            <button type="submit"><svg style="background-color: #3a3a3a;" width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M33.0607 13.0607C33.6464 12.4749 33.6464 11.5251 33.0607 10.9393L23.5147 1.3934C22.9289 0.807611 21.9792 0.807611 21.3934 1.3934C20.8076 1.97919 20.8076 2.92893 21.3934 3.51472L29.8787 12L21.3934 20.4853C20.8076 21.0711 20.8076 22.0208 21.3934 22.6066C21.9792 23.1924 22.9289 23.1924 23.5147 22.6066L33.0607 13.0607ZM0 13.5H32V10.5H0V13.5Z" fill="#FFF4F4"/>
+                </svg>
+            </button>
+        </form>
+        <a class="register-button" href="/register">New User? Register</a>
+    </div>
+    
+</body>
+<%- include('../structure/footer') -%>
