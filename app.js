@@ -82,6 +82,7 @@ app.get("/leaderboards", (req, res) => {
 				title: "Leaderboards",
 				users: Users,
 				username: req.user.username,
+				geekcoins: req.user.geekcoins,
 			});
 		}
 	});
@@ -92,6 +93,7 @@ app.get("/itweek/worldofchoice", (req, res) => {
 	res.render("menu/itweekmenu.ejs", {
 		title: "IChooseYou",
 		username: req.user.username,
+		geekcoins: req.user.geekcoins,
 	});
 });
 
@@ -108,6 +110,7 @@ app.get("/:id/dashboard", (req, res) => {
 				status: req.user.online,
 				levels: req.user.playerLevels.levels,
 				groupName: req.user.team,
+				geekcoins: req.user.geekcoins,
 			});
 		}
 	});
