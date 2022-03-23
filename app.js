@@ -121,6 +121,7 @@ app.get("/groups", (req, res) => {
 	res.render("menu/groups.ejs", {
 		title: "Groups",
 		username: req.user.username,
+		geekcoins: req.user.geekcoins,
 	});
 });
 
@@ -129,6 +130,7 @@ app.get("/marketplace", (req, res) => {
 	res.render("menu/marketplace.ejs", {
 		title: "Marketplace",
 		username: req.user.username,
+		geekcoins: req.user.geekcoins,
 	});
 });
 
