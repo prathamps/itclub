@@ -1,0 +1,120 @@
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 60%;
+	left: 10rem;
+}
+
+.itweek-container {
+	display: flex;
+	justify-content: flex-start;
+	background: #e8c261;
+	position: relative;
+	top: 8rem;
+	left: 15%;
+	width: 40%;
+	height: 45%;
+	border-radius: 47px;
+}
+
+.container-text {
+	color: #2d2c2c;
+	position: relative;
+	top: 10%;
+	left: 10%;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.event-counter {
+	font-size: 1.5rem;
+}
+
+.games-container {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: 10rem;
+	left: 15%;
+}
+
+.game-sub-container {
+	margin: 1rem 2rem;
+}
+
+.play-button {
+	transition: all 200ms ease-in;
+}
+
+.game-sub-container:hover .play-button {
+	transform: scale(1.01);
+}
+
+.game-icons {
+	transition: all 200ms ease-in;
+}
+
+.game-sub-container:hover .game-icons {
+	transform: scale(1.04);
+}
+
+rect {
+	transition: all 200ms ease-in;
+}
+
+.game-sub-container:hover .snake-rect {
+	width: 17%;
+	height: 18%;
+}
+
+@media only screen and (max-width: 985px) {
+	.main-container {
+		height: 62%;
+	}
+
+	.itweek-container {
+		left: 5%;
+		width: 90%;
+		height: 35%;
+		border-radius: 25px;
+	}
+
+	.games-container {
+		left: 0%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.game-sub-container {
+		margin: auto;
+	}
+	.games-container svg {
+		width: 151px;
+		height: 175px;
+	}
+}
+
+/* Tablet */
+
+@media (min-width: 985px) and (max-width: 1350px) {
+	.main-container {
+		height: 90%;
+	}
+	.itweek-container {
+		width: 70%;
+		height: 100%;
+		border-radius: 25px;
+	}
+
+	.games-container {
+		display: grid;
+		grid-template-columns: 0.2fr 0.2fr 0.2fr;
+	}
+
+	.games-container svg {
+		width: 226px;
+		height: 262px;
+	}
+}

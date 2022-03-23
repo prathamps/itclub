@@ -69,7 +69,7 @@ router.get("/logout", (req, res) => {
 	User.findByIdAndUpdate(req.user.id, statusChange, (err, foundUser) => {
 		req.logout();
 		req.flash("success", "Logged you out!");
-		res.redirect("/worldofchoice");
+		res.redirect("/");
 	});
 });
 

@@ -4,7 +4,7 @@
     <div class="main-container">
         <div class="welcome-container">
             <div class="container-text">
-                <span>Welcom back,</span> <div><%=username%></div>
+                <span>Welcome back,</span> <div><%=username%></div>
             </div>
             <div class="profile-image">
                 <svg width="195" height="218" viewBox="0 0 195 218" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,18 +15,19 @@
         </div>
 
         <div class="events-container">
-            <a href="/itweek/worldofchoice">
-            <div class="itweek-container">
-                <span>IT WEEK<div class="event-counter">12:00:01</div></span>
+            <div class="event-shine-container">
+                <a href="/itweek/worldofchoice">
+                <div class="itweek-container">
+                    <span>IT WEEK<div class="event-counter">12:00:01</div></span>
                 
-                <div class="event-button">
-                    <svg width="56" height="51" viewBox="0 0 56 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M49.2895 16.3261C57.4235 19.7805 57.4071 31.3148 49.2632 34.746L14.4151 49.4281C7.81783 52.2077 0.522219 47.3572 0.532444 40.1984L0.574526 10.7346C0.584751 3.57568 7.89417 -1.25388 14.4835 1.5445L49.2895 16.3261Z" fill="#424152"/>
+                    <div class="event-button">
+                        <svg width="56" height="51" viewBox="0 0 56 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M49.2895 16.3261C57.4235 19.7805 57.4071 31.3148 49.2632 34.746L14.4151 49.4281C7.81783 52.2077 0.522219 47.3572 0.532444 40.1984L0.574526 10.7346C0.584751 3.57568 7.89417 -1.25388 14.4835 1.5445L49.2895 16.3261Z" fill="#424152"/>
                         </svg>
-                        
+                    </div>
                 </div>
+                </a>
             </div>
-            </a>
             <div class="leaderboard-container">
                 <span>Leaderboards</span>
                 <div>
@@ -38,7 +39,7 @@
     <div class="user-nav-container">
         <div class="level-container">
             <div class="level-text">
-                Level 0:
+                Level <%=levels%>:
             </div>
             <div class="exp-bar-container">
                 <span class="exp-bar-outer">
@@ -49,30 +50,40 @@
         <div class="group-container">
                 <h3>Groups</h3>
                 <div class="groups-sub-container">
-                    <div class="group-icon">
-                    </div>
-                     <div class="group-name">
-                        System Zombies
-                        <div class="status">Online * 1</div>
-                    </div>
-                </div>
-        </div>
-        <div class="recent-container">
-            <h3>Recently played</h3>
-            <div class="recent-sub-container">
-                <div class="game-icon"></div>
-                <div class="game-name">
-                    Snake Game
-                    <div class="highscore">Highscore: 120</div>
+                    <% if (groupName !=="Solo") { %>
+                        <div class="group-icon"></div>
+                            <div class="group-name">
+                            <%= groupName   %>
+                            <div class="status">Online * 2</div>
+                        </div>
+                    <% } else { %>
+                        <div class="data-empty-container">
+                            <div class="data-empty-text">
+                                No Recently Played Games
+                            </div>
+                        </div>
+                    <% } %>    
                 </div>
              </div>
-            <div class="recent-sub-container">
-                <div class="game-icon"></div>
-                <div class="game-name">
-                    Block Snap
-                    <div class="highscore">Highscore: 320</div>
+        <div class="recent-container">
+            <h3>Recently Played</h3>
+           <% if (groupName!=="Solo") { %>
+                <% for( let index = 0; index < 2; index++ ) { %>
+                    <div class="recent-sub-container">
+                        <div class="game-icon"></div>
+                        <div class="game-name">
+                            Snake Game
+                            <div class="highscore">Highscore: 120</div>
+                        </div>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <div class="data-empty-container">
+                    <div class="data-empty-text">
+                        No Recently Played Games
+                    </div>
                 </div>
-            </div>
+            <% } %>
         </div>
     </div> 
 	</body>

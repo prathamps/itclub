@@ -1,8 +1,18 @@
 <%- include('../structure/header') %>
 <%- include('../structure/sidenav') %>
-
-    </body>
+		<h1>Leaderboards is underconstruction</h1>
+	</body>
 </html>
+
+<style>
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+</style>
 <!-- Leaderboard section -->
 <% users.forEach((user, index) => { %>
 <div id="playerName<%=index+1%>"></div>

@@ -165,11 +165,16 @@
 
 		<!-- Top Navbar -->
 		<div class="top-nav-container">
-			<div class="top-nav-buttons">
-				<button href="" class="profile-button">S</button>
+			<div class="top-nav-buttons profile-dropdown">
+				<button  onclick="dropDown()" class="profile-button">S</button>
+					<div id="dropDown" class="profile-dropdown-content">
+						<a href="/<%=username%>/dashboard">My Profile</a>
+						<a href="/logout">Logout</a>
+					</div>
+				
 			</div>
 			<div class="top-nav-buttons">
-				<button onclick="" class="notification-button">
+				<button class="notification-button">
 					<svg
 						width="39"
 						height="61"
@@ -188,6 +193,7 @@
 							stroke-width="3"
 						/>
 					</svg>
+
 				</button>
 			</div>
 			<div class="top-nav-buttons">
@@ -215,3 +221,4 @@
 				<span class="geekcoins">0</span>
 			</div>
 		</div>
+		<script src="/static/menu/navbar.js"></script>

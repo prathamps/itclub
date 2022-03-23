@@ -12,9 +12,9 @@
 	background: #424152;
 	position: relative;
 	top: 8rem;
-	left: 10%;
-	width: 50%;
-	height: 60%;
+	left: 15%;
+	width: 45%;
+	height: 90%;
 	border-radius: 47px;
 }
 
@@ -31,6 +31,9 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
+	position: relative;
+	top: 10rem;
+	left: 15%;
 }
 
 .events-container a {
@@ -40,11 +43,11 @@
 .itweek-container {
 	display: flex;
 	background: #e8c261;
-	position: relative;
+	/* position: relative;
 	top: 10rem;
-	left: 10rem;
+	left: 50%; */
 	width: 100%;
-	height: 60%;
+	height: 70%;
 	border-radius: 47px;
 	color: #2d2c2c;
 	font-size: 2rem;
@@ -72,10 +75,9 @@
 .leaderboard-container {
 	background: #424152;
 	position: relative;
-	top: 10rem;
-	left: 15%;
+	left: 1rem;
 	width: 15%;
-	height: 60%;
+	height: 70%;
 	border-radius: 47px;
 	display: grid;
 	place-items: center;
@@ -183,6 +185,57 @@
 	margin-left: 1rem;
 }
 
+.itweek-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.data-empty-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/**
+   * The "shine" element
+   */
+
+.itweek-container:after {
+	content: "";
+	position: absolute;
+	top: -110%;
+	left: -210%;
+	width: 200%;
+	height: 200%;
+	opacity: 0;
+	transform: rotate(30deg);
+
+	background: rgba(255, 255, 255, 0.13);
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0.13) 0%,
+		rgba(255, 255, 255, 0.13) 77%,
+		rgba(255, 255, 255, 0.5) 92%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
+/* Hover state - trigger effect */
+
+.itweek-container:hover:after {
+	opacity: 1;
+	top: -30%;
+	left: -30%;
+	transition-property: left, top, opacity;
+	transition-duration: 0.7s, 0.7s, 0.15s;
+	transition-timing-function: ease;
+}
+
+/* Active state */
+
+.itweek-container:active:after {
+	opacity: 0;
+}
 /* Mobile */
 
 @media only screen and (max-width: 600px) {
@@ -201,14 +254,17 @@
 	.welcome-container {
 		left: 5%;
 		width: 90%;
-		height: 30%;
+		height: 35%;
 		border-radius: 25px;
 	}
 
+	.events-container {
+		left: 6%;
+	}
 	.itweek-container {
-		left: 13%;
-		width: 80%;
+		width: 100%;
 		height: 35%;
+		border-radius: 25px;
 	}
 
 	.itweek-container span {
@@ -216,12 +272,18 @@
 		top: 1rem;
 		left: 1rem;
 		padding-right: 0rem;
+		font-size: 1.5rem;
 	}
 
 	.leaderboard-container {
-		left: 3%;
+		left: 1rem;
 		width: 40%;
 		height: 35%;
+		border-radius: 25px;
+	}
+
+	.leaderboard-container span {
+		font-size: 1.5rem;
 	}
 
 	.check-button {
@@ -236,6 +298,7 @@
 		height: 60%;
 		width: 80%;
 		border-radius: 25px;
+		margin-bottom: 5rem;
 	}
 
 	.level-text {
@@ -248,6 +311,74 @@
 
 	h3 {
 		font-size: 1rem;
+	}
+
+	.group-icon,
+	.game-icon {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 10px;
+	}
+}
+
+/* Tablet */
+
+@media (min-width: 600px) and (max-width: 1350px) {
+	.main-container {
+		height: 80%;
+	}
+	.container-text {
+		margin: auto 1rem;
+	}
+
+	.profile-image {
+		margin-top: 0;
+		transform: scale(0.7);
+	}
+	.welcome-container {
+		width: 60%;
+		height: 50%;
+	}
+
+	.itweek-container {
+		width: 100%;
+		height: 50%;
+	}
+
+	.itweek-container span {
+		position: relative;
+		top: 1rem;
+		left: 1rem;
+		padding-right: 15rem;
+	}
+
+	.leaderboard-container {
+		left: 1rem;
+		width: 20%;
+		height: 50%;
+	}
+
+	.check-button {
+		padding: auto;
+	}
+
+	/* User Navbar */
+	.user-nav-container {
+		position: static;
+		margin: auto;
+		height: 80%;
+		width: 60%;
+		transform: translateX(-7%);
+		border-radius: 25px;
+		margin-bottom: 5rem;
+	}
+
+	.level-text {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
 	}
 
 	.group-icon,

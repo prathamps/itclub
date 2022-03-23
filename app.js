@@ -88,8 +88,10 @@ app.get("/leaderboards", (req, res) => {
 });
 
 app.get("/itweek/worldofchoice", (req, res) => {
-	res.render("menu/choicemenu.ejs", {
+	if (!req.isAuthenticated()) return res.redirect("/login");
+	res.render("menu/itweekmenu.ejs", {
 		title: "IChooseYou",
+		username: req.user.username,
 	});
 });
 
@@ -104,6 +106,8 @@ app.get("/:id/dashboard", (req, res) => {
 				title: "Dashboard",
 				username: req.user.username,
 				status: req.user.online,
+				levels: req.user.playerLevels.levels,
+				groupName: req.user.team,
 			});
 		}
 	});
