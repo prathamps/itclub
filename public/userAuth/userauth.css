@@ -81,6 +81,55 @@ form {
 	margin-top: 50%;
 }
 
+.alert-danger {
+	margin: 1rem;
+	color: rgb(255, 94, 94);
+}
+
+.login-profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 200px;
+	height: 4rem;
+	min-width: fit-content;
+	border-radius: 10px;
+	background: #3a3a3a;
+	color: #fff;
+	border: 1px solid #eddede;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.profile-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	height: 3rem;
+	width: 3rem;
+	border: 1px solid;
+	border-radius: 10px;
+	background-color: #916ec9;
+	color: #fff;
+	margin: auto;
+	transition: 250ms;
+}
+
+.profile-text {
+	font-size: 1.2rem;
+	margin: auto;
+}
+
 /* Mobile Screens */
 @media only screen and (max-width: 600px) {
 	form input {

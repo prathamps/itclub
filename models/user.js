@@ -13,6 +13,7 @@ var userSchema = new mongoose.Schema({
 	geekcoins: { type: Number, default: 0 },
 	gamecount: { type: Number, default: 0 },
 	online: { type: Boolean, default: true },
+	visted: { type: Number, default: 0 },
 	recentlyPlayed: [
 		{
 			type: String,

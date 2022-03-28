@@ -1,29 +1,31 @@
 <%- include('../structure/header') %>
+<link rel="stylesheet" href="/static/menu/leaderboard.css">
 <%- include('../structure/sidenav') %>
-		<h1>Leaderboards is underconstruction</h1>
-	</body>
-</html>
 
-<style>
-h1 {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 
-}
-</style>
 <!-- Leaderboard section -->
-<% users.forEach((user, index) => { %>
-<div id="playerName<%=index+1%>"></div>
-<div id="playerScore<%=index+1%>"></div>
-<%}) %>
-
-<!-- <script>
+<section class="leaderboard-container">
+	<div class="leaderboard-sub-container">
+		<ul class="leaderboard-header">
+			<li>Rank</li>
+			<li>Username</li>
+			<li>Score</li>
+		</ul>
+		<% users.forEach((user, index) => { %>
+			<ul class="leaderboard-content">
+				<li id="playerRank<%=index+1%>"></li>
+				<li class="player-name" id="playerName<%=index+1%>"></li>
+				<li class="player-score" id="playerScore<%=index+1%>"></li>
+			</ul>
+		
+		<%}) %>
+	</div>
+</section>
+<script>
 			var userArr=[];
             <% for(var i=0;i<users.length;i++){ %> 
 			var user = {name:"<%-users[i].username%>",
-						score:<%-users[i].online%>}
+						score:<%-users[i].score%>}
 				
 				userArr.push(user);
 			<%}%>  
@@ -33,16 +35,23 @@ h1 {
             console.log(sortedUser)
 	function arrangeUser(){
 			for(var j=1;j<=sortedUser.length;j++){
+				
 				 var x = document.getElementById("playerName"+j);
 				 var y = document.getElementById("playerScore"+j);
+				 var z = document.getElementById("playerRank"+j);
 					 var name = sortedUser[j-1].name;
 					 var score = sortedUser[j-1].score;
                      console.log(name)
 					 x.innerText = name;
 					 y.innerText = score;
+					 z.innerText = j;
 				}
 			}
 	setTimeout(arrangeUser, 200);
-</script> -->
+</script>
+
+
+</body>
+</html>
 
 <%- include('../structure/footer')-%>

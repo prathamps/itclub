@@ -20,7 +20,9 @@ let grid_size = 25;
 let fruit_horizontal_distance = (fruit_vertical_distance = 0);
 let snake_trail = [];
 let snake_length = 5;
-
+let score_earned = 0;
+let time = [];
+let counter = 0;
 function startGame() {
 	start();
 }
@@ -84,11 +86,33 @@ function start() {
 		gamedetails.style.width = "100%";
 	}
 
-	score.innerHTML = "0";
+	score.innerText = "0";
+	time.push({
+		time: counter,
+		score: score_earned,
+	});
 	setInterval(updateGameArea, 1000 / 15);
 }
 
 function updateGameArea() {
+	counter += 1;
+	time.push({
+		time: counter,
+		score: score_earned,
+	});
+	if (counter % 200 == 0) {
+		counter = 0;
+		time = [];
+		time.push({
+			time: counter,
+			score: score_earned,
+		});
+	} else {
+		if (counter > 2) {
+			if (time[counter].score - time[counter - 1].score > 200) score_earned = 0;
+		}
+	}
+
 	game_area_width = roundUp(window.innerWidth);
 	game_area_outer_width = roundUp(window.outerWidth / 5);
 	game_area_height = roundUp(window.innerHeight);
@@ -164,10 +188,10 @@ function updateGameArea() {
 			snake_trail[i].y == snake_vertical
 		) {
 			snake_length = 5;
-			score.innerHTML = score_earned;
-			final_score.innerHTML = score.innerHTML;
+			score.innerText = score_earned;
+			final_score.innerText = score.innerText;
+			document.getElementById("game-over-score").value = score_earned;
 			if (score_earned != 0) game_over_screen.style.visibility = "inherit";
-			score_earned = 0;
 		}
 	}
 	snake_trail.push({ x: snake_horizontal, y: snake_vertical });
@@ -180,8 +204,8 @@ function updateGameArea() {
 	) {
 		snake_length++;
 		score_earned += 20;
-		score.innerHTML = score_earned;
-		final_score.innerHTML = score.innerHTML;
+		score.innerText = score_earned;
+		final_score.innerText = score.innerText;
 		tile_count_vertical = roundUp(tile_count_vertical);
 		tile_count_horizontal = roundUp(tile_count_horizontal);
 		fruit_horizontal_distance_checker = roundUp(
@@ -286,7 +310,3 @@ function handleTouchMove(evt) {
 	xDown = null;
 	yDown = null;
 }
-
-document.getElementById("leaderboardsBtn").onclick = () => {
-	location.href = "/leaderboards";
-};

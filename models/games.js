@@ -5,8 +5,13 @@ var gamesSchema = new mongoose.Schema({
 	name: String,
 	image: String,
 	descrption: String,
-	difficulty: { type: Number, default: 0 },
-	maxscore: { type: Number, default: 0 },
+	players: [
+		{
+			username: { type: Number, default: 0 },
+			score: [{ type: Number, default: 0 }],
+			highscore: { type: Number, default: 0 },
+		},
+	],
 });
 
 module.exports = mongoose.model("gameChoices", gamesSchema);

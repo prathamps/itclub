@@ -76,6 +76,7 @@ rect {
 	.itweek-container {
 		left: 5%;
 		width: 90%;
+		min-width: 150px;
 		height: 35%;
 		border-radius: 25px;
 	}
@@ -105,6 +106,7 @@ rect {
 	.itweek-container {
 		width: 70%;
 		height: 100%;
+		min-width: 150px;
 		border-radius: 25px;
 	}
 

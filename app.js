@@ -111,6 +111,7 @@ app.get("/:id/dashboard", (req, res) => {
 				levels: req.user.playerLevels.levels,
 				groupName: req.user.team,
 				geekcoins: req.user.geekcoins,
+				vists: req.user.visted,
 			});
 		}
 	});

@@ -1,0 +1,118 @@
+body {
+	display: grid;
+	justify-content: center;
+	align-content: flex-start;
+}
+.leaderboard-container {
+	position: relative;
+	top: 8rem;
+	width: fit-content;
+	background-color: #424152;
+	border-radius: 47px;
+	min-height: 10rem;
+}
+
+.leaderboard-header {
+	display: flex;
+	width: 50rem;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	text-decoration: none;
+	border: 1px beige solid;
+	border-radius: 10px;
+	padding: 0;
+	height: 3rem;
+	margin: 3rem;
+	transition: 250ms;
+}
+
+.leaderboard-header li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+	font-size: 1.3rem;
+	border: 1px beige solid;
+	border-radius: 10px;
+	width: 10rem;
+}
+
+.leaderboard-header li:nth-child(2) {
+	border-radius: 0%;
+	align-self: center;
+	width: inherit;
+}
+
+.leaderboard-header li:nth-child(1) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.leaderboard-header li:nth-child(3) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.leaderboard-content {
+	display: flex;
+	width: 50rem;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 0;
+	height: 3rem;
+	margin: 1.5rem 3rem 1.5rem 3rem;
+	transition: 250ms;
+}
+
+.leaderboard-content li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+	font-size: 1.2rem;
+	border: 1px beige solid;
+	border-radius: 10px;
+	width: 10rem;
+	margin: 1rem;
+}
+
+.leaderboard-content li:nth-child(2) {
+	display: flex;
+	width: inherit;
+	margin: 1rem;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 600px) {
+	.leaderboard-container {
+		width: fit-content;
+		border-radius: 15px;
+		margin: auto;
+	}
+
+	.leaderboard-header {
+		font-size: 1rem;
+		width: 20rem;
+		margin: auto;
+		margin: 2rem 1rem;
+		border-radius: 10px;
+	}
+
+	.leaderboard-content {
+		font-size: 0.8rem;
+		width: 20rem;
+		margin: auto;
+		margin: 1rem 1rem;
+		border-radius: 10px;
+	}
+}
+
+/* Tablet */
+
+@media (min-width: 600px) and (max-width: 1350px) {
+}

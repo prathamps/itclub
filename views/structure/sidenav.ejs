@@ -166,7 +166,7 @@
 		<!-- Top Navbar -->
 		<div class="top-nav-container">
 			<div class="top-nav-buttons profile-dropdown">
-				<button  onclick="dropDown()" class="profile-button">S</button>
+				<button  onclick="dropDown()" class="profile-button"><%=username.charAt(0).toUpperCase()%></button>
 					<div id="dropDown" class="profile-dropdown-content">
 						<a href="/<%=username%>/dashboard">My Profile</a>
 						<a href="/logout">Logout</a>
