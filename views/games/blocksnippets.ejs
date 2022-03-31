@@ -8,39 +8,24 @@
         <div class="main-container">
             <ul class="columns">
           
-              <li class="column options-column">
+              <li class="column options-column" >
                 <div class="column-header option-header">
                   <h4>Options</h4>
                 </div>
                 <ul class="option-list" id="options">
                   <li class="task" id="optionOne">
                     <pre class="code-highlight" ><code class="language-c " id="Option1">
-for (i = 3; i &lt= n; ++i) {
-    printf("%d, ", nextTerm);
-    t1 = t2;
-    t2 = nextTerm;
-    nextTerm = t1 + t2;
-}
+loading
 </code></pre>
                   </li>
                   <li class="task" id="optionTwo">
                     <pre class="code-highlight" ><code class="language-c " id="Option2">
-for (i = 3; i &gt= n; ++i) {
-    printf("%d, ", nextTerm);
-    t1 = t2;
-    t2 = nextTerm;
-    nextTerm = t1 + t2;
-}
+loading
 </code></pre>
                   </li>
                   <li class="task" id="optionThree">
                     <pre class="code-highlight" ><code class="language-c " id="Option3">
-for (i = 3; i &gt= n; ++i) {
-    printf("%d, ", nextTerm);
-    t1 = t2;
-    t2 = nextTerm;
-    nextTerm = t1 - t2;
-}
+loading
 </code></pre>
                   </li>
                 </ul>
@@ -48,22 +33,12 @@ for (i = 3; i &gt= n; ++i) {
           
               <li class="column doing-column">
                 <div class="column-header">
-                  <h4>Program to find the fibonnaci sequence of first n numbers</h4>
+                  <h4 id="questionHead">loading</h4>
                 </div>
                 <ul class="task-list" id="question">
                   <li class="task question-code">
                     <pre class="code-highlight" ><code class="language-c " id="CODE">
-#include &ltstdio.h&gt
-int main() {
-                            
-int i, n;
-                   
-int t1 = 0, t2 = 1;
-int nextTerm = t1 + t2;        
-
-printf("Enter the number of terms: ");
-scanf("%d", &n);                        
-printf("Fibonacci Series: %d, %d, ", t1, t2);                       
+loading                    
                     </code></pre>                    
                   </li>
                   <li class="task question-code end-block">
@@ -76,6 +51,15 @@ printf("Fibonacci Series: %d, %d, ", t1, t2);
               </li>
             </ul>
           </div>
+          <div class="game-over-container" id="gameOver">
+            <form action="/games/tatakaesnake/<%=id%>/updatescore?_method=PUT" method="POST">
+                <div class="game-over-card">
+                    <div class="game-over-text">Game Over</div>
+                    <input class="game-over-score" name="score" readonly id="game-over-score"/>
+                    <button class="leaderboard-btn" id="leaderboardsBtn" type="submit">Leaderboards</button>
+                </div>
+            </form>
+        </div>
         
     <script type="text/javascript" src="/static/prism/prism.js"></script>      
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>

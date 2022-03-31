@@ -40,11 +40,11 @@ body {
 	position: absolute;
 	bottom: -50%;
 	left: -50%;
-	transform: translate(-50%, 30%);
+	transform: translate(-49%, 30%);
 }
 
 .lap-shadow {
-	height: 41rem;
+	height: 40rem;
 	width: 75rem;
 	transition: all 250ms ease-in-out;
 }
@@ -97,7 +97,7 @@ body {
 	}
 
 	.power-off-button {
-		width: 15rem;
+		width: 10rem;
 		height: 10rem;
 	}
 }

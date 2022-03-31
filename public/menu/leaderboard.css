@@ -115,4 +115,25 @@ body {
 /* Tablet */
 
 @media (min-width: 600px) and (max-width: 1350px) {
+	.leaderboard-container {
+		width: fit-content;
+		border-radius: 25px;
+		margin: auto;
+	}
+
+	.leaderboard-header {
+		font-size: 1.2rem;
+		width: 35rem;
+		margin: auto;
+		margin: 2rem 1rem;
+		border-radius: px;
+	}
+
+	.leaderboard-content {
+		font-size: 1rem;
+		width: 35rem;
+		margin: auto;
+		margin: 1rem 1rem;
+		border-radius: 10px;
+	}
 }

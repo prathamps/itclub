@@ -66,6 +66,8 @@ h4 {
 }
 
 .doing-column {
+	position: absolute;
+	left: 35%;
 	height: max-content;
 	width: max-content;
 }
@@ -101,7 +103,7 @@ li {
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 	margin-left: 0rem;
-	height: fit-content;
+	height: auto;
 
 	border: #000013 0.15rem solid;
 	border-radius: 0.2rem;
@@ -136,7 +138,82 @@ li {
 	background-color: #2b9c43;
 }
 
-@media screen and (max-width: 640px) {
+/* Game Over*/
+.game-over-container {
+	display: grid;
+	place-items: center;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(15, 15, 15, 0.75);
+	visibility: hidden;
+	transition: all 250ms ease-in-out;
+}
+
+.game-over-card {
+	display: grid;
+	place-items: center;
+	height: 15rem;
+	width: 20rem;
+	border-radius: 10px;
+	background-color: white;
+
+	color: var(--color2);
+	background-size: cover;
+	padding: 2rem 0 0;
+	max-width: 20rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+
+	transition: 500ms ease;
+}
+
+.game-over-card:hover,
+.game-over-card:focus-within {
+	transform: scale(1.05);
+}
+
+.game-over-text {
+	color: rgb(114, 114, 114);
+	font-size: 3rem;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+		0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+		0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+		0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+		0 20px 20px rgba(0, 0, 0, 0.15);
+	transition: 500ms ease;
+}
+
+.leaderboard-btn {
+	background: none;
+	border: 2px solid;
+	border-radius: 10px;
+	font: inherit;
+	line-height: 1;
+	margin: 0.5em;
+	padding: 1em 2em;
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+	transition: 300ms ease-in;
+}
+.leaderboard-btn:hover,
+.leaderboard-btn:focus {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+.game-over-score {
+	border: none;
+	text-align: center;
+	font-weight: 700;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 800px) {
 	.options-column {
 		position: absolute;
 		bottom: 0;
@@ -164,6 +241,7 @@ li {
 	}
 
 	.doing-column {
+		position: initial;
 		width: 22rem;
 		height: fit-content;
 	}
@@ -174,6 +252,31 @@ li {
 
 	.task-list .question-code {
 		width: inherit;
+	}
+
+	/* Game Over */
+	.game-over-container {
+		display: grid;
+		place-items: center;
+		height: 92%;
+		width: 100%;
+	}
+
+	.game-over-card {
+		height: 10rem;
+		width: 10rem;
+		border-radius: 10px;
+	}
+
+	.leaderboard-btn {
+		height: 2rem;
+		width: 8rem;
+		font-size: 1rem;
+		padding: 0;
+	}
+
+	.game-over-text {
+		font-size: 1.7rem;
 	}
 }
 /* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
@@ -203,4 +306,8 @@ li {
 	opacity: 0.2;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 	filter: alpha(opacity=20);
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1400px) {
 }

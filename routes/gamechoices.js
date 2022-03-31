@@ -30,7 +30,19 @@ router.put("/tatakaesnake/:id/updatescore", (req, res) => {
 //Block Snippets
 router.get("/snapthatcode", (req, res) => {
 	if (!req.isAuthenticated()) return res.redirect("/login");
-	res.render("./games/blocksnippets", { title: "SnapThatCode" });
+	res.render("./games/blocksnippets", {
+		title: "SnapThatCode",
+		id: req.user._id,
+	});
+});
+
+//Quiz
+router.get("/quiz", (req, res) => {
+	if (!req.isAuthenticated()) return res.redirect("/login");
+	res.render("./games/quiz", {
+		title: "Take em Quiz",
+		id: req.user._id,
+	});
 });
 
 module.exports = router;

@@ -365,7 +365,7 @@
 	/* User Navbar */
 	.user-nav-container {
 		position: static;
-		margin: auto;
+		margin: 5rem auto auto auto;
 		height: 80%;
 		width: 60%;
 		transform: translateX(-7%);
