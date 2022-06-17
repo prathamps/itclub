@@ -20,7 +20,7 @@ body {
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
-	background-color: hsl(var(--hue), 100%, 20%);
+	background-color: #2c2c2c;
 }
 
 body.correct {
@@ -51,6 +51,16 @@ body.wrong {
 	--hue: var(--hue-neutral);
 	border: 1px solid hsl(var(--hue), 100%, 30%);
 	background-color: hsl(var(--hue), 100%, 50%);
+	border-radius: 5px;
+	padding: 5px 10px;
+	color: white;
+	outline: none;
+}
+
+.btn-normal {
+	--hue: var(270);
+	border: 1px solid hsl(var(--hue), 100%, 30%);
+	background-color: hsl(270, 100%, 50%);
 	border-radius: 5px;
 	padding: 5px 10px;
 	color: white;
